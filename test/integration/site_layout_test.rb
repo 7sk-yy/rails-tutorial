@@ -1,21 +1,18 @@
 require "test_helper"
 
-class StaticPagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get home" do
+class SiteLayoutTest < ActionDispatch::IntegrationTest
+  test "layout links" do
     get root_path
     assert_response :success
+    assert_select "a[href=?]", root_path, count: 2
+    assert_select "a[href=?]", about_path
+    assert_select "a[href=?]", contact_path
     assert_select "title", full_title
-  end
 
-  test "shoud get about" do
     get about_path
-    assert_response :success
     assert_select "title", full_title("About")
-  end
 
-  test "shoud get contact" do
     get contact_path
-    assert_response :success
     assert_select "title", full_title("Contact")
   end
 end
