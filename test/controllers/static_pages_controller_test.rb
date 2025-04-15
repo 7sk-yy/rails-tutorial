@@ -4,5 +4,18 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get static_pages_home_url
     assert_response :success
+    assert_select "title", "Rails Tutorial"
+  end
+
+  test "shoud get about" do
+    get static_pages_about_url
+    assert_response :success
+    assert_select "title", "About | Rails Tutorial"
+  end
+
+  test "shoud get contact" do
+    get static_pages_contact_url
+    assert_response :success
+    assert_select "title", "Contact | Rails Tutorial"
   end
 end
