@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/about"
-  get "static_pages/contact"
+  root "static_pages#home"
+  get "/about", to: "static_pages#about"
+  get "/contact", to: "static_pages#contact"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -14,6 +14,4 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-
-  root "static_pages#home"
 end
