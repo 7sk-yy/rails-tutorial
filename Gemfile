@@ -17,6 +17,14 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem "bootstrap-sass",  "3.4.1"
+gem "sassc-rails",     "2.1.2"
+gem "jquery-rails"
+gem "bcrypt",          "3.1.18"
+gem "rails-controller-testing"
+gem "will_paginate",           "3.3.1"
+gem "bootstrap-will_paginate", "1.0.0"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
@@ -49,6 +57,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "faker", "2.21.0"
 end
 
 group :development do
