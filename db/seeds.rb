@@ -10,9 +10,10 @@
 
 User.create!(
   name: "Example user",
-  email: "example@railstutorial.org",
-  password: "foobarbaz",
-  password_confirmation: "foobarbaz"
+  email: "hoge@mail.com",
+  password: "hogehoge",
+  password_confirmation: "hogehoge",
+  admin: true
 )
 
 99.times do |n|
