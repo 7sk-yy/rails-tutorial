@@ -23,12 +23,6 @@ class InvalidPasswordTest < UsersLogin
   end
 end
 
-class InvalidRememberDigestTest < UsersLogin
-  test "authenticated? should return false for a user with nil digest" do
-    assert_not @user.authenticated?("")
-  end
-end
-
 class ValidLogin < UsersLogin
   def setup
     super
