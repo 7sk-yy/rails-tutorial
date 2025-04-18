@@ -95,7 +95,6 @@ class PasswordUpdateTest < PasswordResetForm
 end
 
 class ExpiredToken < PasswordResets
-
   def setup
     super
     post password_resets_path,
@@ -110,7 +109,6 @@ class ExpiredToken < PasswordResets
 end
 
 class ExpiredTokenTest < ExpiredToken
-
   test "should redirect to the password-reset page" do
     assert_redirected_to new_password_reset_url
   end
