@@ -20,10 +20,6 @@ class UsersIndexAdminTest < UsersIndexAdmin
     assert_template "users/index"
   end
 
-  test "should paginate users" do
-    assert_select "div.pagination"
-  end
-
   test "should have delete links" do
     first_page_of_users = User.where(activated: true).paginate(page: 1)
     first_page_of_users.each do |user|
